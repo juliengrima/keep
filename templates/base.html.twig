@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Compiled and minified CSS -->
+{#        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">#}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{#        <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >#}
+{#        <link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" >#}
+        <script src="https://kit.fontawesome.com/4d01033d40.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block header %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}{% endblock %}
+        {% block javascripts %}
+            <!-- Compiled and minified JavaScript -->
+{#            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>#}
+            <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+            <script src="{{ asset('js/materialize.min.js') }}"></script>
+            <script src="{{ asset('js/mainjs.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

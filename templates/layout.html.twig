@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="nav-image">
+                <a href="{{ path('app_homepage_homepage') }}" >
+                    <img src="{{ asset('pictures/keeplogo.png') }}">
+                </a>
+            </div>
+        </li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!" class="waves-effect">Second Link</a></li>
+        <li><a href="#!" class="waves-effect">Third Link</a></li>
+        <li><a href="#!" class="waves-effect">Fourth Link</a></li>
+        <li><a href="#!" class="waves-effect">Feeth Link</a></li>
+{#        <li><div class="divider"></div></li>#}
+{#        <li><a class="subheader">Subheader</a></li>#}
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger link-menu"><i class="material-icons material-icons-menu">menu</i></a>
+
+{% endblock %}
+{% block footer %}
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="">
+                        <a href="mailto:contact@ecotoner.fr" class="action-button shadow animate light-blue"> {# colors : blue/red/green/yellow #}
+                           Contactez nous
+                        </a>
+                    </p>
+{#                    <p class="grey-text text-lighten-4"></p>#}
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul class="icons material-icons">
+                        <li><a href="http://www.groupe-tse.fr/ecotoner/" class="icon brands fab fa-google icons-color" target="_blank"><span class="label">Google</span></a></li>
+                        <li><a href="https://github.com/juliengrima" class="icon brands fa-github icons-color" target="_blank"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://fr.linkedin.com/in/julien-grima-927612129" class="icon brands fa-linkedin-in icons-color" target="_blank"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f icons-color" target="_blank"><span class="label">Facebook</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Keep Connection © 2019 Tout droits réservés
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+{% endblock %}
