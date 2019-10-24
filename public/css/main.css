@@ -180,3 +180,9 @@ ul.icons {
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid;
 }
+
+/* CARDS */
+.card-image{
+    width: 100%;
+    height: 100%;
+}

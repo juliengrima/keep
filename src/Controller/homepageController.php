@@ -17,4 +17,12 @@ class homepageController extends AbstractController
 
         return $this->render('default/index.html.twig');
     }
+
+    /**
+     * @Route("/downloads")
+     */
+    public function downloads(){
+
+        return $this->render('default/downloads.html.twig');
+    }
 }
