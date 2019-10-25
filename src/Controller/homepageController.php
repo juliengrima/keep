@@ -33,4 +33,12 @@ class homepageController extends AbstractController
 
         return $this->render('default/whoarewe.html.twig');
     }
+
+    /**
+     * @Route("/who_are_we/charte")
+     */
+    public function charte(){
+
+        return $this->render('default/charte.html.twig');
+    }
 }
