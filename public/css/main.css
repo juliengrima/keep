@@ -12,6 +12,19 @@
     margin-left: -12%;
 }
 
+.title-index{
+    z-index: 2;
+    margin-top: 5%;
+}
+
+.responsive-img{
+    z-index: -100;
+}
+
+.decoration{
+    text-decoration: ghostwhite underline;
+}
+
 /* ICONS */
 ul.icons {
     cursor: default;

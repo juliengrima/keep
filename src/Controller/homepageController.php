@@ -25,4 +25,12 @@ class homepageController extends AbstractController
 
         return $this->render('default/downloads.html.twig');
     }
+
+    /**
+     * @Route("/who_are_we")
+     */
+    public function whoAreWe(){
+
+        return $this->render('default/whoarewe.html.twig');
+    }
 }
