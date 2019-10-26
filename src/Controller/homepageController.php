@@ -41,4 +41,11 @@ class homepageController extends AbstractController
 
         return $this->render('default/charte.html.twig');
     }
+
+    /**
+     * @Route("/know-how")
+     */
+    public function knowhow(){
+        return $this->render('default/knowhow.html.twig');
+    }
 }
