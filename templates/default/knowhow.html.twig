@@ -1,78 +1,341 @@
-{% extends 'layout.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('css/ghpage-materialize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/knowhow.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo/fullpage.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo/parallax-alvarotrigo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo/exemples.css') }}" />
+{#    <link rel="stylesheet" href="{{ asset('css/alvarotrigo/fonts.css') }}" />#}
 {% endblock %}
 
 {% block body %}
+    <div class="actions">
+        <div class="actions-option">
+            <ul id="actions">
+                <li id="turnOn" class="active">On</li>
+                <li id="turnOff">Off</li>
+            </ul>
+        </div>
 
-    <div id="blue" class="block blue">
-        <nav class="pushpin-demo-nav pinned" data-target="blue" style="top: 0px;">
-            <div class="nav-wrapper light-blue">
-                <div class="container">
-                    <a href="#" class="brand-logo center">Blue</a>
-                </div>
+        <div class="actions-option">
+            Parallax offset:
+            <select data-option="offset">
+                <option value="30">30%</option>
+                <option value="60" selected>62%</option>
+                <option value="100">100%</option>
+            </select>
+        </div>
+
+        <div class="actions-option">
+            Parallax type:
+            <select data-option="type">
+                <option value="reveal" selected>reveal</option>
+                <option value="cover">cover</option>
+            </select>
+        </div>
+
+        <div class="actions-option">
+            scrollBar:
+            <select data-option="scrollBar">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+            </select>
+        </div>
+
+        <div class="actions-option">
+            autoScrolling:
+            <select data-option="autoScrolling">
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+        </div>
+        <div class="actions-option actions-compatible">
+            Compatible?
+            <div class="note">
+                <b class="note-title">NOT compatible with the following fullPage.js features:</b>
+                <ul>
+                    <li>The `fp-auto-height` feature</li>
+                    <li>Offset Sections extension</li>
+                    <li>Drag And Move extension</li>
+                </ul>
             </div>
-        </nav>
-        <img src="{{ asset('pictures/parallax-1-1.jpg') }}" class="" width="100%" height="101%">
+        </div>
     </div>
 
-    <div id="red" class="block red lighten-1">
-        <nav class="pushpin-demo-nav pin-top" data-target="red" style="top: 0px;">
-            <div class="nav-wrapper red">
-                <div class="container">
-                    <a href="#" class="brand-logo center">Red</a>
+    <ul id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+    </ul>
+
+    <ul class="preview-extensions-menu">
+        <li class="preview-more-extensions"><a href="https://alvarotrigo.com/fullPage/extensions/">More extensions</a></li><!--
+	--><li class="preview-buy-extension"><a href="https://gum.co/fullpageParallax">Download extension</a></li>
+    </ul>
+
+    <div id="myContainer">
+
+        <div class="section" id="section1">
+            <div class="slide" id="slide1-1">
+                <div class="fp-bg"></div>
+                <h1>PARALLAX</h1>
+                <p>Use `parallax: true`. Made easy.</p>
+                <div class="button" id="download">
+                    <a href="https://gum.co/fullpageParallax" class="button-purchase">I want it!</a>
+                </div>
+                <p class="documentation">
+                    <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Extension---Parallax">Documentation</a>
+                </p>
+
+            </div>
+            <div class="slide" id="slide1-2">
+                <div class="fp-bg"></div>
+                <div class="intro">
+                    <h1>fullPage.js</h1>
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/trusted.png" />
                 </div>
             </div>
-        </nav>
-        <img src="{{ asset('pictures/parallax-3-2.jpg') }}" class="" width="100%" height="101%">
-    </div>
-
-    <div id="green" class="block green lighten-1">
-        <nav class="pushpin-demo-nav pin-top" data-target="green" style="top: 0px;">
-            <div class="nav-wrapper green">
-                <div class="container">
-                    <a href="#" class="brand-logo center">Green</a>
+            <div class="slide" id="slide1-3">
+                <div class="fp-bg"></div>
+                <div class="intro">
+                    <h1>Free support</h1>
+                    <p>Extension issues are supported at no extra cost!</p>
                 </div>
             </div>
-        </nav>
-        <img src="{{ asset('pictures/F4A5328.jpg') }}" class="" width="100%" height="101%">
+        </div>
+        <div class="section" id="section2">
+            <div class="fp-bg" id="section2"></div>
+            <div class="intro">
+                <h1>FLEXIBLE</h1>
+                <p>Put not limits to yourself</p>
+                <p>Use parallax even without scroll bar!</p>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="slide" id="slide3-1">
+                <div class="fp-bg"></div>
+                <div class="intro">
+                    <h1>TAKE CONTROL</h1>
+                    <p>Totally configurable.</p>
+                    <p>For sections & slides! </p>
+                </div>
+            </div>
+            <div class="slide" id="slide3-2">
+                <div class="fp-bg"></div>
+                <div class="intro">
+                    <h1>GUARRANTEE</h1>
+                    <p>30 days money back guarratee if no domain was activated.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide3-3">
+                <div class="intro">
+                    <div class="fp-bg"></div>
+                    <h1>TRUSTED</h1>
+                    <p>Join thoudands of other developers who trusted fullPage.js extensions!</p>
+                </div>
+            </div>
+            <div class="slide" id="slide3-4">
+                <div class="fp-bg"></div>
+                <div class="intro">
+                    <h1>DOCUMENTED</h1>
+                    <p>If fullPage.js is known for one thing it's for its great documentation!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="fp-bg"></div>
+            <div class="intro">
+                <h1>IMPRESS</h1>
+                <p>Take it to the next level!</p>
+            </div>
+        </div>
     </div>
-
+    <input type="hidden" id="_4" value="3" />
 {% endblock %}
 
 {% block javascripts %}
-    {{ parent() }}
-    <script type="text/javascript" src="{{ asset('js/init.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.timeago.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/lunr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo/fullpage.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo/fullpage.parallax.limited.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo/fullpage.extensions.min.js') }}"></script>
 
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.parallax').parallax();
-        });
-    </script>
-    <script type="text/javascript">
-    $('.pushpin-demo-nav').each(function() {
-        var $this = $(this);
-        var $target = $('#' + $(this).attr('data-target'));
-        $this.pushpin({
-            top: $target.offset().top,
-            bottom: $target.offset().top + $target.outerHeight() - $this.height()
-        });
-    });
-    </script>
-    <script type="text/javascript">
-        // $(document).ready(function(){
-        //     $('.pushpin').pushpin();
-        // });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.pushpin');
-            var instances = M.Pushpin.init(elems, options);
-        });
-    </script>
+        // Initializing fullpage.js
+        initialize(false);
 
+        function initialize(hasScrollBar){
+            new fullpage('#myContainer', {
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+                menu: '#menu',
+                slidesNavigation: true,
+                parallax: true,
+                parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+                parallaxOptions: {
+                    type: 'reveal',
+                    percentage: 100,
+                    property: 'translate'
+                },
+                scrollingSpeed: 1000,
+                autoScrolling: true,
+                scrollBar: hasScrollBar,
+                fitToSection:false
+            });
+        }
+
+        document.getElementById('turnOn').addEventListener('click', function(){
+            removeClass(document.getElementById('actions').querySelector('li.active'), 'active');
+            addClass(this, 'active');
+
+            fullpage_api.parallax.init();
+        });
+
+        document.getElementById('turnOff').addEventListener('click', function(){
+            removeClass(document.getElementById('actions').querySelector('li.active'), 'active');
+            addClass(this, 'active');
+
+            fullpage_api.parallax.destroy();
+        });
+
+        // Applying the different options when changing the select boxes
+        document.querySelectorAll('select').forEach(function(selectBox){
+            selectBox.addEventListener('change', function(){
+
+                var fullPageOption = this.getAttribute('data-option');
+                var value = this.value;
+
+                if(fullPageOption === 'offset'){
+                    fullpage_api.parallax.setOption('offset', value);
+                }
+
+                else if(fullPageOption === 'type'){
+                    fullpage_api.parallax.setOption('type', value);
+                }
+
+                else if(fullPageOption === 'autoScrolling'){
+                    fullpage_api.setAutoScrolling(value === 'true');
+                }
+
+                // scrollBar
+                // Because there's no method `setScrollBar` we have to destryo and initialice fullPage.js again
+                // but this time we'll initialice it again with the scrollBar:true option
+                else{
+                    fullpage_api.destroy('all');
+                    initialize(value === 'true');
+                }
+            });
+        });
+
+        //utils
+        function addClass(item, className) {
+            if (item.classList){
+                item.classList.add(className);
+            }
+            else{
+                item.className += ' ' + className;
+            }
+            return item;
+        }
+
+        function removeClass(item, className){
+            if (item.classList){
+                item.classList.remove(className);
+            }
+            else{
+                item.className = item.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
+            return item;
+        }
+
+        function index(item, selector) {
+            var children = item.parentNode.childNodes;
+            var num = 0;
+            for (var i=0; i<children.length; i++) {
+                if (children[i] == item) return num;
+                if (children[i].nodeType==1) num++;
+            }
+            return -1;
+        }
+    </script>
 {% endblock %}
+
+
+
+
+{#-------------------------------------------------------------------------------------------------------------------#}
+{#{% block stylesheets %}#}
+{#    {{ parent() }}#}
+{#    <link rel="stylesheet" href="{{ asset('css/ghpage-materialize.css') }}">#}
+{#    <link rel="stylesheet" href="{{ asset('css/knowhow.css') }}">#}
+{#{% endblock %}#}
+
+{#{% block body %}#}
+
+{#    <div id="blue" class="block blue">#}
+{#        <nav class="pushpin-demo-nav pinned" data-target="blue" style="top: 0px;">#}
+{#            <div class="nav-wrapper light-blue">#}
+{#                <div class="container">#}
+{#                    <a href="#" class="brand-logo center">Blue</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
+{#        <img src="{{ asset('pictures/parallax-1-1.jpg') }}" class="" width="100%" height="101%">#}
+{#    </div>#}
+
+{#    <div id="red" class="block red lighten-1">#}
+{#        <nav class="pushpin-demo-nav pin-top" data-target="red" style="top: 0px;">#}
+{#            <div class="nav-wrapper red">#}
+{#                <div class="container">#}
+{#                    <a href="#" class="brand-logo center">Red</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
+{#        <img src="{{ asset('pictures/parallax-3-2.jpg') }}" class="" width="100%" height="101%">#}
+{#    </div>#}
+
+{#    <div id="green" class="block green lighten-1">#}
+{#        <nav class="pushpin-demo-nav pin-top" data-target="green" style="top: 0px;">#}
+{#            <div class="nav-wrapper green">#}
+{#                <div class="container">#}
+{#                    <a href="#" class="brand-logo center">Green</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
+{#        <img src="{{ asset('pictures/F4A5328.jpg') }}" class="" width="100%" height="101%">#}
+{#    </div>#}
+
+{#{% endblock %}#}
+
+{#{% block javascripts %}#}
+{#    {{ parent() }}#}
+{#    <script type="text/javascript" src="{{ asset('js/init.js') }}"></script>#}
+{#    <script type="text/javascript" src="{{ asset('js/jquery.timeago.min.js') }}"></script>#}
+{#    <script type="text/javascript" src="{{ asset('js/lunr.min.js') }}"></script>#}
+
+{#    <script type="text/javascript">#}
+{#        $(document).ready(function(){#}
+{#            $('.parallax').parallax();#}
+{#        });#}
+{#    </script>#}
+{#    <script type="text/javascript">#}
+{#    $('.pushpin-demo-nav').each(function() {#}
+{#        var $this = $(this);#}
+{#        var $target = $('#' + $(this).attr('data-target'));#}
+{#        $this.pushpin({#}
+{#            top: $target.offset().top,#}
+{#            bottom: $target.offset().top + $target.outerHeight() - $this.height()#}
+{#        });#}
+{#    });#}
+{#    </script>#}
+{#    <script type="text/javascript">#}
+{#        // $(document).ready(function(){#}
+{#        //     $('.pushpin').pushpin();#}
+{#        // });#}
+
+{#        document.addEventListener('DOMContentLoaded', function() {#}
+{#            var elems = document.querySelectorAll('.pushpin');#}
+{#            var instances = M.Pushpin.init(elems, options);#}
+{#        });#}
+{#    </script>#}
+
+{#{% endblock %}#}
