@@ -76,3 +76,22 @@ g.layer g.strikeout line {
     stroke: #bbb;
     stroke-width: 2px;
 }
+
+.darken3-blue-grey{
+    background-color: #34495e;
+}
+.darken2-blue-grey{
+    background-color: #5d6d7e;
+}
+.darken1-blue-grey{
+    background-color:  #85929e ;
+}
+.white-text{
+    color: ghostwhite;
+    font-size: x-large;
+    z-index: 5;
+}
+
+.divider {
+    height: 50px;
+}

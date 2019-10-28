@@ -48,4 +48,18 @@ class homepageController extends AbstractController
     public function knowhow(){
         return $this->render('default/knowhow.html.twig');
     }
+
+    /**
+     * @Route("/services")
+     */
+    public function services(){
+        return $this->render('default/services.html.twig');
+    }
+
+    /**
+     * @Route("/references")
+     */
+    public function reference(){
+        return $this->render('default/reference.html.twig');
+    }
 }
