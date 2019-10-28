@@ -13,10 +13,9 @@
         <li><a href="{{ path('app_homepage_downloads') }}" class="waves-effect divider"><i class="material-icons">cloud_download</i>Télémaintenance</a></li>
         <li><a href="{{ path('app_homepage_whoarewe') }}" class="waves-effect"><i class="material-icons">supervisor_account</i>Qui sommes nous</a></li>
         <li><a href="{{ path('app_homepage_knowhow') }}" class="waves-effect"><i class="material-icons">emoji_objects</i>Notre savoir faire</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">computer</i>Nos services</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">account_tree</i>Nos références</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">storefront</i>Nos partenaires</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">email</i>Nous contacter</a></li>
+        <li><a href="{{ path('app_homepage_services') }}" class="waves-effect"><i class="material-icons">computer</i>Nos services</a></li>
+        <li><a href="{{ path('app_homepage_reference') }}" class="waves-effect"><i class="material-icons">account_tree</i>Nos références</a></li>
+{#        <li><a href="#!" class="waves-effect"><i class="material-icons">email</i>Nous contacter</a></li>#}
 {#        <li><div class="divider"></div></li>#}
 {#        <li><a class="subheader">Subheader</a></li>#}
     </ul>
@@ -34,6 +33,21 @@
                            Contactez nous
                         </a>
                     </p>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <ul>
+                                <li>Adresse :</li>
+                                <li>2, rue Gambetta</li>
+                                <li>77210 AVON</li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m6">
+                            <ul>
+                                <li>Un conseiller répond à toutes vos questions au :</li>
+                                <li> 01 64 69 00 26</li>
+                            </ul>
+                        </div>
+                    </div>
 {#                    <p class="grey-text text-lighten-4"></p>#}
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -46,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright center">
             <div class="container">
                 Keep Connection © 2019 Tout droits réservés
             </div>
@@ -57,11 +71,9 @@
 
 {% block javascripts %}
     {{ parent() }}
-
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();
         });
     </script>
-
 {% endblock %}
