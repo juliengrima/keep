@@ -220,3 +220,17 @@ ul.icons {
 .parallax-img{
 
 }
+
+.index-h1{
+    color: ghostwhite;
+    margin-top: 10%;
+    font-weight: bolder;
+    font-size: 5.6em;
+}
+.span-index-h1-1{
+    color: #dc8013;
+}
+
+.span-index-h1-2{
+    color: cornflowerblue;
+}
